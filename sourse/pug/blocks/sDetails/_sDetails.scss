@@ -139,8 +139,18 @@
 		margin-bottom: rem(10) !important;
 	}
 }
-.image img {
-	width: 100%;
+.image {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #000000;
+		opacity: 0.4;
+	}
 }
 
 .whittle {
@@ -162,6 +172,17 @@
 	}
 	.image {
 		margin-bottom: rem(20);
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.dry {
+	&__image {
+		img {
+			width: 100%;
+		}
 	}
 }
 
