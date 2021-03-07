@@ -1,0 +1,36 @@
+mixin sContent()
+	// start sContent
+	+b.SECTION.sContent.section#sContent&attributes(attributes)
+		.container
+			+b.tabs
+				+e.caption
+					.row
+						mixin btn(t, i)
+							+e.btn.col-6.col-md-4.col-xl-2&attributes(attributes)
+								+e.btn-inner
+									+e.IMG.image(src=`img/@2x/caption-${i}.png`)
+									span= t
+						+btn('Термоди-фицируем', 1).active
+						+btn('Топливные гранулы', 2)
+						+btn('Сушим', 3)
+						+btn('Строгаем', 4)
+						+btn('Фитосанитарная обработка', 5)
+						+btn('О нас', 6)
+				+e.wrap
+					mixin content(t, p1, p2, p3)
+						+e.content&attributes(attributes)
+							+e.item
+								+e.H1.title.text-center= t
+								+e.text
+									p!= p1
+									p!= p2
+									p!= p3
+								+b.A.btn(herf="#") 
+									span Узнать подробнее
+					+content('Термомодификация древесины', `&minus;&nbsp;Передовые технологии термообработки древесины в&nbsp;среде инертных газов`, `&minus;&nbsp;Знание технологии термодификации и&nbsp;ее&nbsp;особенностей от&nbsp;А до&nbsp;Я`, `&minus;&nbsp;Возможен учет индивидуальных пожеланий и&nbsp;требований`).active
+					+content('Топливные гранулы', `&minus;&nbsp;Экологически чистое биотопливо с&nbsp;высокой теплотворной способностью`, `&minus;&nbsp;Топливные гранулы идеально подходят для автоматизированной подачи`, `&minus;&nbsp;Не&nbsp;применяем связующие химические добавки`)
+					+content('Сушим', `&minus;&nbsp;Используем импортное оборудование от&nbsp;ведущего производителя Инкомак`, `&minus;&nbsp;Круглосуточно контралируем процесс`, `&minus;&nbsp;Наш персонал имеет большой опыт работы`)
+					+content('Строгаем', `&minus;&nbsp;Обеспечиваем полный спектр услуг от&nbsp;сушки до&nbsp;упаковки`, `&minus;&nbsp;На&nbsp;нашем заводе высококачественное импортное оборудование от&nbsp;фирмы Leadermac`)
+					+content('Фитосанитарная обработка', `&minus;&nbsp;Наша компания находится в&nbsp;системе ФГИС &laquo;Аргус-Обеззараживание&raquo;`, `&minus;&nbsp;Специальные технологии позволяют уничтожить большинство видов вредителей древесины`)
+					+content('О нас', `&minus;&nbsp;Оказываем полный спектр услуг: от&nbsp;сушки до&nbsp;термообработки`, `&minus;&nbsp;Большой опыт работы: 12&nbsp;лет на&nbsp;рынке`, `&minus;&nbsp;Индивидуально оговариваем условия с&nbsp;каждым клиентом`)
+	// end sContent

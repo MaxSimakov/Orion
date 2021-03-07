@@ -1,0 +1,211 @@
+// start .sContent
+.sContent {
+	--sPT: 50px;
+	--sPB: 175px;
+
+	@include media-breakpoint-down(lg) {
+		--sPT: 35px;
+		--sPB: 100px;
+	}
+	@include media-breakpoint-down(sm) {
+		--sPT: 25px;
+		--sPB: 70px;
+	}
+
+	// --sTPB: ;
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
+
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
+} // end.sContent
+.tabs {
+	&__caption {
+		.row {
+			@include roww(10px);
+		}
+	}
+	&__btn {
+		position: relative;
+		&:hover,
+		&.active {
+			.tabs__btn-inner span {
+				z-index: 100;
+			}
+			.tabs__image {
+				opacity: 0.8;
+			}
+		}
+		&.active {
+			&::before {
+				--width: 27px;
+				content: "";
+				position: absolute;
+				width: var(--width);
+				height: var(--width);
+				bottom: rem(-17);
+				left: calc(50% - var(--width) / 2);
+				border-left: 1px solid $body-color;
+				border-top: 1px solid $body-color;
+				transform: rotate(45deg);
+				@include media-breakpoint-down(xl) {
+					--width: 18px;
+					bottom: rem(-8);
+				}
+				@include media-breakpoint-down(sm) {
+					--width: 12px;
+					bottom: rem(-4);
+				}
+			}
+		}
+	}
+	&__btn-inner {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: $border-radius;
+		min-height: rem(130);
+		margin-bottom: rem(15);
+		overflow: hidden;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: #000;
+			opacity: 0.3;
+		}
+
+		@include media-breakpoint-down(lg) {
+			min-height: rem(100);
+		}
+		@include media-breakpoint-down(sm) {
+			min-height: rem(70);
+			margin-bottom: rem(10);
+			border-radius: $border-radius-sm;
+		}
+		span {
+			text-align: center;
+			text-transform: uppercase;
+			font-size: rem(17);
+			font-weight: 100;
+			padding: 0 rem(5);
+			@media screen and (max-width: 399.98px) {
+				font-size: rem(13);
+			}
+		}
+	}
+	&__image {
+		position: absolute;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0.5;
+	}
+	&__content {
+		padding-top: rem(70);
+		@include media-breakpoint-down(lg) {
+			padding-top: rem(45);
+		}
+		@include media-breakpoint-down(sm) {
+			padding-top: rem(25);
+		}
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__title {
+		font-size: rem(46);
+		font-weight: 300;
+		letter-spacing: 5px;
+		margin-bottom: rem(70);
+		@include media-breakpoint-down(lg) {
+			font-size: rem(36);
+			margin-bottom: rem(45);
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: rem(22);
+			margin-bottom: rem(25);
+		}
+	}
+	&__text {
+		display: inline-block;
+		max-width: rem(900);
+		font-size: rem(24);
+		font-weight: 300;
+		margin-bottom: rem(35);
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(25);
+			font-size: rem(20);
+		}
+		@include media-breakpoint-down(sm) {
+			margin-bottom: rem(5);
+			font-size: rem(18);
+		}
+		p {
+			@include media-breakpoint-down(lg) {
+				margin-bottom: rem(20);
+			}
+			@include media-breakpoint-down(sm) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+}
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: rem(200);
+	min-height: rem(55);
+	color: #000000;
+	border-radius: $border-radius;
+	background-color: $body-color;
+	font-size: rem(16);
+	&:hover {
+		color: #000000;
+		background-color: shift-color($link-color, $link-shade-percentage);
+	}
+	@include media-breakpoint-down(sm) {
+		min-height: rem(40);
+	}
+}

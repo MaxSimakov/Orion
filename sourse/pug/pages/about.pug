@@ -1,0 +1,34 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sDetails/_sDetails.pug
+include ../blocks/mobile-menu/_mobile-menu.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= 'main.jpg'
+block title
+	- let  title= 'О нас'
+	title= title
+block pagecontent
+
+	+header()
+	//- +sContent()
+	+sDetails()
+		+b.about
+			+e.text.main-text
+				p УЧЕНИЕ Августина органично соединяет высокую теологию Востока с&nbsp;углубленным вниманием Запада к&nbsp;психологии и&nbsp;антропологии. Один из&nbsp;крупнейших представителей христианского неоплатонизма (платоники &laquo;ближе всех к&nbsp;нам&raquo; De&nbsp;Civ. D. VIII 5), Августин со&nbsp;своим небывалым дотоле интересом к&nbsp;человеческой личности и&nbsp;человеческой истории выступает родоначальником европейского &laquo;субъектоцентрического&raquo; и&nbsp;исторического сознания. Далекий от&nbsp;строгого систематизма, он&nbsp;объединяет в&nbsp;идее христианского индивидуума четыре основные группы проблем: онто-теологию, психологическую антропо-гносеологию, моральную психологию&nbsp;и, наконец, их&nbsp;мистико-эсхатологическую проекцию&nbsp;&mdash; историческую тео-антропологию &laquo;Града&raquo;; их&nbsp;внешним обрамлением служат экзегетика и&nbsp;герменевтика.
+	//- +top-nav()
+	//- +soc()
+	//- +in-c("checkbox", "text")
+
+	//- +topLine() 
+	//- +headerBlock()
+	//- +sForm()
+	//- +sContact()
+	+footer()
+
+
+	

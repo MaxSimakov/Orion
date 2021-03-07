@@ -1,0 +1,18 @@
+mixin footer()
+	+b.FOOTER.footer
+		.container
+			.row
+				.col-lg-2
+				.col-lg-4
+					+e.interest Заинтересовались услугой?
+				.col-lg-6
+					.row
+						.col-sm-6
+							+e.adress
+								+e.heading Наш адрес:
+								+e.text Калужская область, <br> Медынский район, <br> село Адуево, 146
+						.col-sm-6
+							+e.contacts
+								+e.heading Наши контакты:
+								+e.A.link(href="tel:8(953)3178231") +7 (953) 317-82-31
+								+e.A.link(href="mailto:orionaduevo@gmail.com") orionaduevo@gmail.com

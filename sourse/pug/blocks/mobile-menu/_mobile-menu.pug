@@ -1,0 +1,17 @@
+mixin mobile-menu(data)
+	// start mobile-menu
+	-
+		var nav= {
+			"Главная страница":"#",
+			"Термодифицируем":"#",
+			"Топливные гранулы ":"#",
+			"Сушим":"#",
+			"Строгаем":"#",
+			"Фитосанитарная обрабока":"#",
+			"О нас":"#",
+			"Контакты":"#"
+			}
+	+b.UL.mobile-menu.menu-mobile--js(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		each linkPatch, linkName in nav
+			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
+	// end mobile-menu

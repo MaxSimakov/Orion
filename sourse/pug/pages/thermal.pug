@@ -1,0 +1,48 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sDetails/_sDetails.pug
+include ../blocks/mobile-menu/_mobile-menu.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= 'main.jpg'
+block title
+	- let  title= 'Термомодификация древесины'
+	title= title
+block pagecontent
+
+	+header()
+	//- +sContent()
+	+sDetails()
+		+b.thermal
+			+e.text.main-text
+				p В&nbsp;следствие постепенного сужения возможных областей использования химически обработанной древесины и&nbsp;все более ужесточающихся требований к&nbsp;самим химическим составам, содержащими соли тяжелых металлов, рынок потребления термообработанной древесины в&nbsp;последние годы постоянно расширяется. 
+				p В&nbsp;нашей установке применяется один из&nbsp;наиболее передовых методов термомодифицирования древесины: технология термической обработки в&nbsp;среде инертных газов. Данная технология позволяет проводить процесс при температурах свыше 200&nbsp;&deg;C. изменяя его эксплуатационные свойства:
+			.row
+				.col-lg-6
+					+e.image.text-center
+						img.res-i(src="img/@2x/details-1.png", alt="")
+				.col-lg-6
+					+e.list.main-text.list
+						p 1)	повышается биологическая стойкость
+						p 2)	снижается равновесная влажность
+						p 3)	сокращается коэффициент разбухания древесины при увлажнении
+						p 4)	существенно уменьшается возможность проникновения воды в&nbsp;материал
+						p 5)	улучшаются декоративные свойства недорогих пород и&nbsp;т.д.
+			+e.text.text-center.bottom-text
+				p.mb-0 Термомодификация дерева&nbsp;&mdash; от&nbsp;8000руб&nbsp;/&nbsp;м&sup3;. <br> Дополнительные вопросы и&nbsp;требования готовы обсуждать.
+	//- +top-nav()
+	//- +soc()
+	//- +in-c("checkbox", "text")
+
+	//- +topLine() 
+	//- +headerBlock()
+	//- +sForm()
+	//- +sContact()
+	+footer()
+
+
+	

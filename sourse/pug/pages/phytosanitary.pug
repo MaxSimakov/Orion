@@ -1,0 +1,38 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sDetails/_sDetails.pug
+include ../blocks/mobile-menu/_mobile-menu.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= 'main.jpg'
+block title
+	- let  title= 'Фитосанитарная обработка'
+	title= title
+block pagecontent
+
+	+header()
+	//- +sContent()
+	+sDetails()
+		+b.phytosanitary
+			+e.text.main-text
+				p Продукция деревообрабатывающей промышленности, в&nbsp;соответствии с&nbsp;международным стандартом ISPM&nbsp;15, должна проходить фитосанитарную обработку.
+				p Работы по&nbsp;карантинному фитосанитарному обеззараживанию древесины и&nbsp;упаковочной оснастки заключается в&nbsp;следующем&nbsp;&mdash; древесина нагревается до&nbsp;температуры не&nbsp;ниже +56&deg;C и&nbsp;находится в&nbsp;указанном температурном диапазоне не&nbsp;менее 30&nbsp;минут. Это позволяет эффективно уничтожать большинство видов вредителей древесины.
+				p.mb-2 ООО &laquo;Орион&raquo; имеет лицензию на&nbsp;выполнение данного вида деятельности и&nbsp;находится в&nbsp;системе &laquo;Аргус-обеззараживание&raquo;.
+			+e.text.text-center.bottom-text.mb-lg-5
+				p Стоимость услуг по&nbsp;фитосанитарному обеззараживанию&nbsp;&minus; 300&nbsp;р/м&sup3;.
+	//- +top-nav()
+	//- +soc()
+	//- +in-c("checkbox", "text")
+
+	//- +topLine() 
+	//- +headerBlock()
+	//- +sForm()
+	//- +sContact()
+	+footer()
+
+
+	

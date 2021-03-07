@@ -1,0 +1,58 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sDetails/_sDetails.pug
+include ../blocks/mobile-menu/_mobile-menu.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= 'main.jpg'
+block title
+	- let  title= 'Механическая обработка'
+	title= title
+block pagecontent
+
+	+header()
+	//- +sContent()
+	+sDetails()
+		+b.whittle
+			+e.text.main-text
+				p На&nbsp;нашем производстве установлено оборудование фирмы Leadermac, серии 623U, 423U. Опытный персонал в&nbsp;сочетании с&nbsp;ответственным подходом, позволяют нам производить быстро и&nbsp;качественно.
+			.row.wide
+				.col-sm-4
+					+e.image.image
+						img.res-i(src="img/@2x/details-5.png", alt="")
+				.col-sm-4
+					+e.image.image
+						img.res-i(src="img/@2x/details-6.png", alt="")
+				.col-sm-4
+					+e.image.image
+						img.res-i(src="img/@2x/details-7.png", alt="")
+			.row
+				.col-lg-6
+					.row
+						.col-sm-6.col-lg-12
+							+e.image.image
+								img.res-i(src="img/@2x/details-8.png", alt="")
+						.col-sm-6.col-lg-12
+							+e.image.image
+								img.res-i(src="img/@2x/details-9.png", alt="")
+				.col-lg-6
+					+e.text.main-text
+						p На&nbsp;территории предприятия имеются два цеха общей площадью 1870&nbsp;м2., что позволяет осуществлять хранение сухой доски, после камерной сушки и&nbsp;готовой продукции, в&nbsp;закрытом помещении. Располагая торцовочными станками, сможем отторцевать продукцию в&nbsp;требуемый размер. Отсортируем продукцию по&nbsp;требованиям заказчика. При необходимости упакуем готовую продукцию и&nbsp;осуществим боковую погрузку в&nbsp;автотранспорт.
+					+e.text.text-center.bottom-text.pt-0
+						p Строжка от&nbsp;1800руб/м&sup3;.
+	//- +top-nav()
+	//- +soc()
+	//- +in-c("checkbox", "text")
+
+	//- +topLine() 
+	//- +headerBlock()
+	//- +sForm()
+	//- +sContact()
+	+footer()
+
+
+	

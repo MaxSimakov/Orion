@@ -1,0 +1,14 @@
+mixin header()
+	// start header
+	+b.HEADER.header#header&attributes(attributes)
+		.container
+			+e.wrapper
+				+e.A.logo-wrap(href="#")
+					span Орион
+				+e.contacts
+					+e.A.link(href="tel:8(953)3178231") +7 (953) 317-82-31
+					+e.A.link(href="mailto:orionaduevo@gmail.com") orionaduevo@gmail.com
+				+e.menu-btn.toggle-menu-mobile--js
+					+icon('burger')
+				+mobile-menu
+	// end header
