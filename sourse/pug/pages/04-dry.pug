@@ -7,8 +7,8 @@ include ../blocks/sDetails/_sDetails.pug
 include ../blocks/mobile-menu/_mobile-menu.pug
 
 block variables
-	- let  mainPage= null
-	- let  bg= 'main.jpg'
+	- let  mainPage= 'bg-7'
+	//- - let  bg= 'main.jpg'
 block title
 	- let  title= 'Сушильная камера'
 	title= title
@@ -22,7 +22,7 @@ block pagecontent
 				p На&nbsp;нашем производстве используются две сушильные камеры конвекционного типа фирмы &laquo;Инкомак&raquo;, объемом 100м&sup3; каждая. Проверенные с&nbsp;2008 года технологии и&nbsp;автоматизированные системы управления в&nbsp;сочетании с&nbsp;передовым программным обеспечением от&nbsp;всемирно известного бренда, обеспечивают качественное выполнение сушки пиломатериалов.
 				p Используя технологии удаленного доступа, мы&nbsp;контролируем процесс 24/7.
 			+e.image.image
-				img.res-i(src="img/@2x/details-4.png", alt="")
+				img.res-i(src="img/@2x/details-4.png", alt="" loading='lazy')
 			+e.text.text-center.bottom-text.mb-lg-5
 				p Осуществляем сушку от 1500руб/м³.
 			+e.text.main-text

@@ -9,12 +9,12 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="main.jpg"> 
+	<body class="bg-7"> 
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
 				<div class="container">
-					<div class="header__wrapper"><a class="header__logo-wrap" href="#"><span>Орион</span></a>
+					<div class="header__wrapper"><a class="header__logo-wrap" href="/"><span>Орион</span></a>
 						<div class="header__contacts"><a class="header__link" href="tel:8(953)3178231">+7 (953) 317-82-31</a><a class="header__link" href="mailto:orionaduevo@gmail.com">orionaduevo@gmail.com</a>
 						</div>
 						<div class="header__menu-btn toggle-menu-mobile toggle-menu-mobile--js">
@@ -24,21 +24,21 @@
 						</div>
 						<!-- start mobile-menu-->
 						<ul class="mobile-menu menu-mobile menu-mobile--js" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="#" itemprop="url">Главная страница</a>
+							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="index.html" itemprop="url">Главная страница</a>
 							</li>
-							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="#" itemprop="url">Термодифицируем</a>
+							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="02-thermal.html" itemprop="url">Термодифицируем</a>
 							</li>
-							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="#" itemprop="url">Топливные гранулы </a>
+							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="03-granules.html" itemprop="url">Топливные гранулы </a>
 							</li>
-							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="#" itemprop="url">Сушим</a>
+							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="04-dry.html" itemprop="url">Сушим</a>
 							</li>
-							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="#" itemprop="url">Строгаем</a>
+							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="05-whittle.html" itemprop="url">Строгаем</a>
 							</li>
-							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="#" itemprop="url">Фитосанитарная обрабока</a>
+							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="06-phytosanitary.html" itemprop="url">Фитосанитарная обрабока</a>
 							</li>
-							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="#" itemprop="url">О нас</a>
+							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="07-about.html" itemprop="url">О нас</a>
 							</li>
-							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="#" itemprop="url">Контакты</a>
+							<li class="mobile-menu__item" itemprop="item"><a class="mobile-menu__link" href="#contacts" itemprop="url">Контакты</a>
 							</li>
 						</ul>
 						<!-- end mobile-menu-->
@@ -58,27 +58,27 @@
 						</div>
 						<div class="row wide">
 							<div class="col-sm-4">
-								<div class="whittle__image image"><img class="res-i" src="img/@2x/details-5.png" alt="">
+								<div class="whittle__image image"><img class="res-i" src="img/@2x/details-5.png" alt="" loading="lazy">
 								</div>
 							</div>
 							<div class="col-sm-4">
-								<div class="whittle__image image"><img class="res-i" src="img/@2x/details-6.png" alt="">
+								<div class="whittle__image image"><img class="res-i" src="img/@2x/details-6.png" alt="" loading="lazy">
 								</div>
 							</div>
 							<div class="col-sm-4">
-								<div class="whittle__image image"><img class="res-i" src="img/@2x/details-7.png" alt="">
+								<div class="whittle__image image"><img class="res-i" src="img/@2x/details-7.png" alt="" loading="lazy">
 								</div>
 							</div>
 						</div>
-						<div class="row">
+						<div class="row wide--sm">
 							<div class="col-lg-6">
 								<div class="row">
 									<div class="col-sm-6 col-lg-12">
-										<div class="whittle__image image"><img class="res-i" src="img/@2x/details-8.png" alt="">
+										<div class="whittle__image image mb-lg-4 mb-xl-5"><img class="res-i" src="img/@2x/details-8.png" alt="" loading="lazy">
 										</div>
 									</div>
 									<div class="col-sm-6 col-lg-12">
-										<div class="whittle__image image"><img class="res-i" src="img/@2x/details-9.png" alt="">
+										<div class="whittle__image image"><img class="res-i" src="img/@2x/details-9.png" alt="" loading="lazy">
 										</div>
 									</div>
 								</div>
@@ -96,7 +96,7 @@
 				</div>
 			</section>
 			<!-- end sDetails-->
-			<footer class="footer">
+			<footer class="footer" id="contacts">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-2"></div>
@@ -150,17 +150,11 @@
 		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
-		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
-		<!-- modal libs-->
-		<!-- slider libs-->
-		<script src="libs/swiper/js/swiper.min.js"> </script>
-		<!-- /slider libs-->
-		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

@@ -2,6 +2,7 @@
 .sContent {
 	--sPT: 50px;
 	--sPB: 175px;
+	position: relative;
 
 	@include media-breakpoint-down(lg) {
 		--sPT: 35px;
@@ -11,7 +12,21 @@
 		--sPT: 25px;
 		--sPB: 70px;
 	}
-
+	background-image: url(../img/@2x/bg-1.jpg);
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	background-size: auto;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: #000;
+		opacity: 0.55;
+		z-index: 0;
+	}
 	// --sTPB: ;
 	@include media-breakpoint-up(xl) {
 	}
@@ -53,6 +68,18 @@
 	}
 } // end.sContent
 .tabs {
+	position: relative;
+	z-index: 50;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.011642156862745057) 100%);
+		z-index: -1;
+		// background: linear-gradient(180deg, rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 0.011642156862745057) 100%);
+	}
 	&__caption {
 		.row {
 			@include roww(10px);
@@ -60,13 +87,14 @@
 	}
 	&__btn {
 		position: relative;
+		z-index: 49;
 		&:hover,
 		&.active {
-			.tabs__btn-inner span {
-				z-index: 100;
-			}
-			.tabs__image {
-				opacity: 0.8;
+			.tabs__btn-inner {
+				box-shadow: 0 0 5px 3px rgba(255, 255, 214, 0.36);
+				&::after {
+					opacity: 0.2;
+				}
 			}
 		}
 		&.active {
@@ -81,6 +109,7 @@
 				border-left: 1px solid $body-color;
 				border-top: 1px solid $body-color;
 				transform: rotate(45deg);
+				z-index: 50;
 				@include media-breakpoint-down(xl) {
 					--width: 18px;
 					bottom: rem(-8);
@@ -109,7 +138,11 @@
 			top: 0;
 			left: 0;
 			background-color: #000;
-			opacity: 0.3;
+			opacity: 0.5;
+			z-index: 50;
+		}
+		span {
+			z-index: 51;
 		}
 
 		@include media-breakpoint-down(lg) {
@@ -137,7 +170,6 @@
 		width: 100%;
 		height: 100%;
 		z-index: -1;
-		opacity: 0.5;
 	}
 	&__content {
 		padding-top: rem(70);
@@ -192,6 +224,7 @@
 	}
 }
 .btn {
+	@include mt;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -201,9 +234,14 @@
 	border-radius: $border-radius;
 	background-color: $body-color;
 	font-size: rem(16);
+
 	&:hover {
 		color: #000000;
 		background-color: shift-color($link-color, $link-shade-percentage);
+	}
+	&:focus,
+	&:active {
+		box-shadow: 0 0 0 rem(4) rgba($color: $body-color, $alpha: 0.2);
 	}
 	@include media-breakpoint-down(sm) {
 		min-height: rem(40);

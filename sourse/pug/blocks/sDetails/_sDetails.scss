@@ -1,19 +1,17 @@
 // start .sDetails
 .sDetails {
-	--sPT: 150px;
 	// --sPB: ;
 	// --sTPB: ;
-	@include media-breakpoint-up(xl) {
-		min-height: rem(1500);
-	}
-	@include media-breakpoint-down(xl) {
-		--sPT: 100px;
-	}
-	@include media-breakpoint-down(lg) {
+	--sPT: 50px;
+
+	@include media-breakpoint-up(md) {
 		--sPT: 70px;
 	}
-	@include media-breakpoint-down(md) {
-		--sPT: 50px;
+	@include media-breakpoint-up(lg) {
+		--sPT: 100px;
+	}
+	@include media-breakpoint-up(xl) {
+		--sPT: 150px;
 	}
 
 	@include media-breakpoint-up(xl) {
@@ -85,6 +83,9 @@
 	@include media-breakpoint-down(md) {
 		font-size: rem(17);
 	}
+	@include media-breakpoint-down(sm) {
+		font-size: rem(15);
+	}
 	p {
 		margin-bottom: rem(80);
 		@include media-breakpoint-down(xl) {
@@ -140,9 +141,12 @@
 	}
 }
 .image {
+	@include mt;
 	position: relative;
+	display: inline-block;
 	&::before {
-		content: '';
+		content: "";
+		@include mt;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -150,6 +154,23 @@
 		height: 100%;
 		background-color: #000000;
 		opacity: 0.4;
+	}
+	&:hover {
+		&::before {
+			opacity: 0;
+		}
+	}
+	img {
+		box-shadow: 0 0 5px 3px rgba(255, 255, 214, 0.36);
+	}
+	&.zoom {
+		&:hover {
+			&::after {
+				content: url(../img/svg/zoom-in.svg);
+				@include a-cent1;
+				width: 20%;
+			}
+		}
 	}
 }
 
@@ -159,7 +180,7 @@
 			@include roww(70px);
 			margin-bottom: rem(80);
 		}
-		
+
 		@include media-breakpoint-down(xl) {
 			margin-bottom: rem(30);
 		}
@@ -169,9 +190,17 @@
 		@include media-breakpoint-down(sm) {
 			margin-bottom: 0;
 		}
+		&--sm {
+			@include media-breakpoint-up(lg) {
+				@include roww(60px);
+			}
+		}
 	}
 	.image {
 		margin-bottom: rem(20);
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
 		img {
 			width: 100%;
 		}
@@ -185,4 +214,3 @@
 		}
 	}
 }
-

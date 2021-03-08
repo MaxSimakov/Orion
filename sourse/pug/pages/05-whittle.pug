@@ -7,8 +7,8 @@ include ../blocks/sDetails/_sDetails.pug
 include ../blocks/mobile-menu/_mobile-menu.pug
 
 block variables
-	- let  mainPage= null
-	- let  bg= 'main.jpg'
+	- let  mainPage= 'bg-7'
+	//- - let  bg= 'main.jpg'
 block title
 	- let  title= 'Механическая обработка'
 	title= title
@@ -23,22 +23,22 @@ block pagecontent
 			.row.wide
 				.col-sm-4
 					+e.image.image
-						img.res-i(src="img/@2x/details-5.png", alt="")
+						img.res-i(src="img/@2x/details-5.png", alt="" loading='lazy')
 				.col-sm-4
 					+e.image.image
-						img.res-i(src="img/@2x/details-6.png", alt="")
+						img.res-i(src="img/@2x/details-6.png", alt="" loading='lazy')
 				.col-sm-4
 					+e.image.image
-						img.res-i(src="img/@2x/details-7.png", alt="")
-			.row
+						img.res-i(src="img/@2x/details-7.png", alt="" loading='lazy')
+			.row.wide--sm
 				.col-lg-6
 					.row
 						.col-sm-6.col-lg-12
-							+e.image.image
-								img.res-i(src="img/@2x/details-8.png", alt="")
+							+e.image.image.mb-lg-4.mb-xl-5
+								img.res-i(src="img/@2x/details-8.png", alt="" loading='lazy')
 						.col-sm-6.col-lg-12
 							+e.image.image
-								img.res-i(src="img/@2x/details-9.png", alt="")
+								img.res-i(src="img/@2x/details-9.png", alt="" loading='lazy')
 				.col-lg-6
 					+e.text.main-text
 						p На&nbsp;территории предприятия имеются два цеха общей площадью 1870&nbsp;м2., что позволяет осуществлять хранение сухой доски, после камерной сушки и&nbsp;готовой продукции, в&nbsp;закрытом помещении. Располагая торцовочными станками, сможем отторцевать продукцию в&nbsp;требуемый размер. Отсортируем продукцию по&nbsp;требованиям заказчика. При необходимости упакуем готовую продукцию и&nbsp;осуществим боковую погрузку в&nbsp;автотранспорт.

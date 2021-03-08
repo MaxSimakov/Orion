@@ -2,14 +2,14 @@ mixin mobile-menu(data)
 	// start mobile-menu
 	-
 		var nav= {
-			"Главная страница":"#",
-			"Термодифицируем":"#",
-			"Топливные гранулы ":"#",
-			"Сушим":"#",
-			"Строгаем":"#",
-			"Фитосанитарная обрабока":"#",
-			"О нас":"#",
-			"Контакты":"#"
+			"Главная страница":"index.html",
+			"Термодифицируем":"02-thermal.html",
+			"Топливные гранулы ":"03-granules.html",
+			"Сушим":"04-dry.html",
+			"Строгаем":"05-whittle.html",
+			"Фитосанитарная обрабока":"06-phytosanitary.html",
+			"О нас":"07-about.html",
+			"Контакты":"#contacts"
 			}
 	+b.UL.mobile-menu.menu-mobile--js(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each linkPatch, linkName in nav

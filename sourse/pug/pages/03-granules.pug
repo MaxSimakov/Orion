@@ -7,8 +7,8 @@ include ../blocks/sDetails/_sDetails.pug
 include ../blocks/mobile-menu/_mobile-menu.pug
 
 block variables
-	- let  mainPage= null
-	- let  bg= 'main.jpg'
+	- let  mainPage= 'bg-7'
+	//- - let  bg= 'main.jpg'
 block title
 	- let  title= 'Топливные гранулы'
 	title= title
@@ -22,17 +22,17 @@ block pagecontent
 				.col-lg-6
 				.col-lg-6
 					+e.text.text-center.main-text
-						p.mb-3 Мы&nbsp;производим топливные гранулы(пеллеты) диаметром 6&nbsp;и&nbsp;8мм.
+						p.mb-3 Мы&nbsp;производим топливные <br> гранулы(пеллеты) диаметром 6&nbsp;и&nbsp;8мм.
 			.row
-				.col-lg-6
-					+e.image.image.text-center
-						img.res-i(src="img/@2x/details-2.png", alt="")
+				.col-lg-6.text-center
+					+e.image.image.mb-lg-5
+						img.res-i(src="img/@2x/details-2.png", alt="" loading='lazy')
 				.col-lg-6
 					+e.text.main-text
 						p.pt-3.mb-4 В&nbsp;качестве сырья для пеллет служит сибирская лиственница. Мы&nbsp;получаем из&nbsp;Сидоску, сушим её&nbsp;до&nbsp;16% влажности(&plusmn;2%), строгаем и&nbsp;из&nbsp;полученных стружки и&nbsp;опилок производим пеллеты. Пеллеты получаются светлые, так как кора в&nbsp;сырье отсутствует. Из-за высокого содержания в&nbsp;лиственнице лигнина, в&nbsp;наших пеллетах не&nbsp;применяются связующие химические добавки.
-				.col-lg-6
-					+e.image.image.text-center
-						img.res-i(src="img/@2x/details-3.png", alt="")
+				.col-lg-6.text-center
+					+e.A.image.image.zoom(href="img/@2x/details-3.png" data-fancybox)
+						img.res-i(src="img/@2x/details-3.png", alt="" loading='lazy')
 				.col-lg-6
 					+e.text.main-text
 						p.pt-3 Пеллеты полностью соответствуют ГОСТу 33103.1&nbsp;&minus; 2017г. &laquo;Биотопливо твердое. Технические характеристики и&nbsp;классы топлива&raquo;. Протокол испытаний &#8470;&nbsp;0182/ИЛЭ08/19 от&nbsp;12.11.2019.
