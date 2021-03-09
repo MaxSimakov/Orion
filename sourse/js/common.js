@@ -89,21 +89,10 @@ const JSCCommon = {
 
 
 };
-const $ = jQuery;
 
 function eventHandler() {
 	JSCCommon.tabscostume('.tabs--js');
 	JSCCommon.mobileMenu();
-
-	// JSCCommon.CustomInputFile(); 
-	var x = window.location.host;
-	let screenName;
-	screenName = document.body.dataset.bg;
-	if (screenName && x.includes("localhost:30")) {
-		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
-	}
-	// modal window
-
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
